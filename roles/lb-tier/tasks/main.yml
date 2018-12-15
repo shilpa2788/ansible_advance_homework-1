@@ -1,2 +1,25 @@
 ---
-# tasks file for lb-tier
+## tasks file for app_prerequisites
+# Common Commands
+
+- name: install haproxy
+  yum:
+    name: "{{ package_name }}"
+    state: latest
+
+- name: enable  haproxy
+  service:
+    name: "{{ package_name }}"
+    enabled: yes
+
+- name: configure haproxy to load balance over app servers
+  template:
+    src: haproxy.cfg.j2
+    dest: /etc/haproxy/haproxy.cfg
+    mode: 0644
+
+- name: start haproxy
+  service:
+    name: "{{ package_name }}"
+    state: restarted
+

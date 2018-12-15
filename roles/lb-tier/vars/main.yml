@@ -1,2 +1,3 @@
 ---
-# vars file for lb-tier
+# vars file for load_balancer
+package_name: haproxy

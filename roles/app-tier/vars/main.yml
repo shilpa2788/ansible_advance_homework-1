@@ -1,2 +1,4 @@
 ---
-# vars file for app-tier
+# vars file for web_server--offline
+package_name: tomcat
+tomcat_base_dir: /usr/share/tomcat/webapps/ROOT
