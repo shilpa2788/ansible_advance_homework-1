@@ -1,5 +1,5 @@
 ---
-# handlers file for web_server--offline
+# hhandlers file for web_server--offline
 - name: restart apache
   service:
     name: "{{ package_name }}"
